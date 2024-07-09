@@ -13,6 +13,9 @@ public class LibroServicio {
     @Autowired
     private LibroRepositorio libroRepositorio;
 
+    @Autowired
+    private GutendexClient gutendexClient;
+
     public List<Libro> buscarPorTitulo(String titulo){
         return libroRepositorio.findByTituloContainingIgnoreCase(titulo);
     }
@@ -30,6 +33,6 @@ public class LibroServicio {
     }
 
     public List<Libro> buscarLibroEnAPI(String titulo){
-        return //list.of()//;
+        return gutendexClient.buscarLibros(titulo);
     }
 }
