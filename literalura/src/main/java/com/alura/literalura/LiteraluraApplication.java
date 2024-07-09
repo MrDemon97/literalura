@@ -41,10 +41,18 @@ public class LiteraluraApplication implements CommandLineRunner {
 					break;
 
 				case 3:
-					listarLibrosPorIdioma(scanner);
+					listarAutoresRegistrados();
 					break;
 
 				case 4:
+					listarAutoresVivos(scanner);
+					break;
+
+				case 5:
+					listarLibrosPorIdioma(scanner);
+					break;
+
+				case 6:
 					continuar = false;
 					System.out.println("Saliendo...");
 					break;
@@ -96,6 +104,14 @@ public class LiteraluraApplication implements CommandLineRunner {
 		for (Libro libro : libros) {
 			System.out.println(libro);
 		}
+	}
+
+	private void listarAutoresRegistrados() {
+		// Implementar lógica para listar autores registrados
+	}
+
+	private void listarAutoresVivos(Scanner scanner) {
+		// Implementar lógica para listar autores vivos en un determinado año
 	}
 
 	private void listarLibrosPorIdioma(Scanner scanner) {
